@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #003366;
+}
+
+.letter {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.letter:hover {
+    transform: scale(1.02);
+}
+
+.letter h2 {
+    font-size: 1.8em;
+    color: #b30000;
+    margin-bottom: 10px;
+}
+
+.letter p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+

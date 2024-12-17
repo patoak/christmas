@@ -1,0 +1,57 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header style */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #b30000;
+}
+
+/* Table styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+thead {
+    background-color: #003366;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Table row styling */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Column headers styling */
+th {
+    font-size: 1.2em;
+}
+
+/* General cell styling */
+td {
+    font-size: 1.1em;
+}
