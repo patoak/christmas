@@ -27,6 +27,8 @@ echo "<link rel='stylesheet' href='children-styles.css'>";
 echo "</head>";
 echo "<body>";
 
+echo "<div id='snowflakes-container'></div>";
+
 echo "<h1>Children List</h1>";
 echo "<table>";
 echo "<thead>";
@@ -48,6 +50,8 @@ foreach ($children as $child) {
 }
 echo "</tbody>";
 echo "</table>";
+
+echo "<script src='snowflakes-script.js'></script>";
 
 echo "</body>";
 echo "</html>";

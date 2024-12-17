@@ -1,0 +1,88 @@
+/* General body styles */
+body {
+    background-color: #0f3b0f;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Needed for positioning snowflakes */
+}
+
+/* Snowflake effect */
+@keyframes snow {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    font-size: 1.5em;
+    color: white;
+    z-index: -1; /* Make sure snowflakes fall behind the content */
+    pointer-events: none;
+    animation: snow linear infinite;
+    animation-duration: 10s; /* Time for one snowflake to fall */
+    animation-timing-function: linear;
+    opacity: 0.7;
+}
+
+/* Alternate row colors */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Table styling */
+table {
+    width: 80%;  /* Adjust the width of the table */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: transparent; /* Make sure the table is transparent */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #146b3a;
+    color: white;
+}
+
+td {
+    width: 25%;  /* Adjust width for each column */
+}
+
+/* Conditional coloring for status */
+.sufficient {
+    color: rgb(127, 192, 127);
+}
+
+.not-enough {
+    color: red;
+}
+
+/* Optional: Add hover effect for rows */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+}
