@@ -4,7 +4,7 @@ body {
     background-color: #153d1f;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: rgb(0, 0, 0);
     overflow-x: hidden; /* Prevent horizontal scroll caused by snowflakes */
 }
 
@@ -47,7 +47,7 @@ body {
     transform: scale(1.02);
 }
 
-h1{
+h1 {
     text-align: center;
     color: white;
     text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5);
@@ -56,11 +56,20 @@ h1{
 
 .letter h2 {
     font-size: 1.8em;
-    color: #b30000;
+    color: #15b300;
     margin-bottom: 10px;
 }
 
 .letter p {
     font-size: 1.2em;
     line-height: 1.6;
+}
+
+/* Styling for the highlighted gift names DOESNT FUCKING WORK*/
+.highlight {
+    background-color: #003cff; 
+    color: #350101; 
+    font-weight: bold; 
+    padding: 2px 5px;
+    border-radius: 3px;
 }

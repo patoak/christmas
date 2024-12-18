@@ -6,7 +6,18 @@ body {
     margin: 0;
     padding: 0;
     position: relative; /* Needed to position the snowflakes */
-    overflow: hidden; /* Prevent scrollbars due to snowflakes falling */
+    overflow: auto; /* Allow scrolling */
+}
+
+/* Snowflake container (fixed to cover the entire viewport) */
+#snowflakes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ensure full viewport height */
+    pointer-events: none; /* Allow interaction with other elements on the page */
+    z-index: 1; /* Snowflakes go behind the content */
 }
 
 /* Snowflake effect */
@@ -24,7 +35,7 @@ body {
     top: -10px;
     font-size: 1.5em;
     color: white;
-    z-index: 1; /* Set a lower z-index for snowflakes to fall behind */
+    z-index: 1;
     pointer-events: none;
     animation: snow linear infinite;
     animation-duration: 10s; /* Default time for one snowflake to fall */
@@ -39,110 +50,4 @@ body {
 
 .snowflake:nth-child(even) {
     animation-duration: 15s; /* Slow down the even snowflakes */
-}
-
-/* Main container styling */
-.container {
-    background-color: #d9534f;
-    color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 900px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    position: relative; /* Make sure the container stays in front of the snowflakes */
-    z-index: 2; /* Set a higher z-index for the container */
-}
-
-/* Header styling */
-h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-shadow: 3px 3px 5px rgba(190, 162, 162, 0.7);
-    color: #ffffff;
-    text-align: center;
-    position: relative; /* Ensure header stays above snowflakes */
-    z-index: 3; /* Make sure header is above snowflakes */
-}
-
-/* Paragraph styling */
-p {
-    color: rgb(255, 255, 255);
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    font-weight: bold;
-    text-align: center; /* Center the paragraph */
-}
-
-/* Table styling */
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(131, 12, 12, 0.1);
-    border-radius: 10px;
-    position: relative; /* Ensure the table stays above the snowflakes */
-    z-index: 2; /* Ensure table is above snowflakes */
-}
-
-thead {
-    background-color: #660000;
-    color: white;
-}
-
-th, td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid rgb(0, 0, 0);
-}
-
-/* Table row styling */
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-/* Hover effect for rows */
-tr:hover {
-    background-color: #e0e0e0;
-}
-
-/* Column headers styling */
-th {
-    font-size: 1.2em;
-}
-
-/* General cell styling */
-td {
-    font-size: 1.1em;
-}
-
-/* Snowflake container (fixed to cover the entire viewport) */
-#snowflakes-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Allow interaction with other elements on the page */
-    overflow: hidden; /* Prevent scrollbars due to snowflakes falling */
-    z-index: 1; /* Ensure that the snowflakes are behind other content */
-}
-
-/* Optional: Snowflake opacity adjustment */
-.snowflake {
-    opacity: 0.7; /* Slightly transparent snowflakes */
-    font-size: 1.5em; /* Default size for snowflakes */
-}
-
-/* Optional: Adjust the size for larger snowflakes */
-.snowflake:nth-child(3n) {
-    font-size: 2em; /* Every third snowflake will be a bit larger */
-}
-
-/* Optional: Adjust the speed for larger snowflakes */
-.snowflake:nth-child(5n) {
-    animation-duration: 20s; /* Some snowflakes fall even slower */
 }

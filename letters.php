@@ -37,7 +37,7 @@ echo "<html lang='en'>";
 echo "<head>";
 echo "<meta charset='UTF-8'>";
 echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
-echo "<title>Children's Letters to Santa Claus</title>";
+echo "<title>Santa's Helper - Letters</title>";
 echo "<link rel='stylesheet' href='letters-styles.css'>";
 echo "</head>";
 echo "<body>";

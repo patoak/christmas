@@ -41,10 +41,12 @@ tr:nth-child(odd) {
 
 /* Table styling */
 table {
-    width: 80%;  /* Adjust the width of the table */
+    width: 100%;  /* Ensure table takes up full width */
     margin: 20px auto;
     border-collapse: collapse;
     background-color: transparent; /* Make sure the table is transparent */
+    table-layout: auto;  /* Makes the table more responsive */
+    word-wrap: break-word; /* Allows long words to wrap */
 }
 
 table, th, td {
@@ -62,7 +64,8 @@ th {
 }
 
 td {
-    width: 25%;  /* Adjust width for each column */
+    overflow: hidden; /* Prevents overflow of large content */
+    text-overflow: ellipsis; /* Adds "..." when text is too long */
 }
 
 /* Conditional coloring for status */
@@ -85,4 +88,61 @@ h1 {
     color: white;
     text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5);
     background-color: transparent;
+}
+
+/* Responsive Design: Table adjustments for smaller screens */
+@media (max-width: 1024px) {
+    table, th, td {
+        font-size: 14px; /* Slightly smaller text for smaller screens */
+    }
+}
+
+/* For screens smaller than 768px: Stack the table and make it more compact */
+@media (max-width: 768px) {
+    table {
+        width: 100%; /* Ensure table fits well */
+        border: none; /* Remove table borders for better readability */
+    }
+
+    td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 5px; /* Add some padding for better readability */
+    }
+
+    td:before {
+        content: attr(data-label); /* Add labels for data in table cells */
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+
+    th, td {
+        font-size: 16px; /* Slightly smaller font size */
+    }
+
+    h1 {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+/* For very small screens (max-width: 480px): Hide snowflakes and adjust content */
+@media (max-width: 480px) {
+    .snowflake {
+        display: none; /* Hide snowflakes on very small screens */
+    }
+
+    h1 {
+        font-size: 18px; /* Decrease the font size of the heading */
+    }
+
+    table {
+        font-size: 12px; /* Smaller table font size for better fit */
+    }
+
+    td:before {
+        font-size: 14px; /* Decrease size of labels */
+    }
 }
